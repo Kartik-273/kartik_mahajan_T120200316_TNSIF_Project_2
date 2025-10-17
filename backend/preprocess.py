@@ -1,12 +1,22 @@
 import numpy as np
-import pandas as pd
 
-def preprocess_input(input_dict, feature_columns):
+def preprocess_input(data: dict):
     """
-    Takes a dict from frontend form inputs and returns a numpy array (1, n_features)
-    matching the model’s expected feature order.
+    Converts dictionary input into numpy array for model.
     """
-    df = pd.DataFrame([input_dict])
-    df = df[feature_columns]  # ensure same order
-    # Convert to float32 for PyTorch
-    return df.values.astype(np.float32)
+    features = np.array([[
+        data['age'],
+        data['sex'],
+        data['chest_pain_type'],
+        data['resting_blood_pressure'],
+        data['cholesterol'],
+        data['fasting_blood_sugar'],
+        data['resting_ecg'],
+        data['max_heart_rate'],
+        data['exercise_induced_angina'],
+        data['st_depression'],
+        data['st_slope'],
+        data['num_major_vessels'],
+        data['thalassemia']
+    ]], dtype=float)
+    return features

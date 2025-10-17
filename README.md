@@ -1,14 +1,15 @@
-# Manufacturing Parts Per Hour Predictor
+# 💓 Heart Disease Prediction App
 
-## 🚀 Overview
-Streamlit + PyTorch app that predicts machine productivity based on process parameters.
+A simple machine learning web application to predict heart disease risk using a Multiple Linear Regression model.
 
-## 🧩 Structure
-- **backend/** — model loading, preprocessing, and prediction utilities  
-- **frontend/** — Streamlit UI form for inputs  
-- **model/** — trained PyTorch `.pkl` from Colab  
+## 🧠 Tech Stack
+- **Frontend:** Streamlit
+- **Backend:** Python
+- **Model:** Trained Linear Regression (`iteration2_model.pkl`)
+- **Libraries:** scikit-learn, numpy, pandas, matplotlib
 
-## ▶️ Run
-```bash
-pip install -r requirements.txt
-streamlit run frontend/app.py
+## 🚀 How to Run
+1. Clone this repository or copy the folder structure.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
